@@ -1,0 +1,7 @@
+int32 number
+int32 limit
+---
+string result
+int32 lastnumber
+---
+string feedback
