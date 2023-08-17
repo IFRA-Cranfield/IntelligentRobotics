@@ -27,6 +27,15 @@ endif()
 
 # Add ROS2 .msg, .srv and .action files:
 
+install(
+  DIRECTORY 
+    action
+    srv 
+    msg
+  DESTINATION 
+    share/${PROJECT_NAME}
+)
+
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
