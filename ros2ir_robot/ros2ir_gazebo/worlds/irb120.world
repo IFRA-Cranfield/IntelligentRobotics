@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+
+<!-- 
+
+# ================================================================================= #
+#                                                                                   #
+#                             Intelligent Robotics                                  #
+#                                                                                   #
+#  (c) Centre for Robotics and Assembly, Cranfield University                       #
+#                                                                                   #
+#  IFRA (Intelligent Flexible Robotics and Assembly) Group, CRANFIELD UNIVERSITY    #
+#  Created on behalf of the IFRA Group at Cranfield University, United Kingdom      #
+#  E-mail: IFRA@cranfield.ac.uk                                                     #                                                                                       #
+#                                                                                   #
+#  IFRA Group - Cranfield University                                                #
+#  AUTHORS: Mikel Bueno Viso - Mikel.Bueno-Viso@cranfield.ac.uk                     #
+#           Dr. Seemal Asif  - s.asif@cranfield.ac.uk                               #
+#                                                                                   #
+#  Date: September, 2023.                                                           #
+#                                                                                   #
+# ================================================================================= #
+
+# ======= COPYRIGHT ======= #
+# URDF taken from:
+# IFRA-Cranfield (2023) ROS 2 Sim-to-Real Robot Control. URL: https://github.com/IFRA-Cranfield/ros2_SimRealRobotControl.
+
+-->
+
+<sdf version="1.4">
+
+  <world name="default">
+
+    <!-- WORLD COMPONENTS: STANDARD -->
+
+    <gravity>0 0 -9.8</gravity>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <scene>
+      <shadows>0</shadows>
+    </scene>
+
+    <!-- GAZEBO PLUGINS: -->
+
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/ros2_grasp</namespace>
+        <argument>model_states:=model_states</argument>
+        <argument>link_states:=link_states</argument>
+      </ros>
+      <update_rate>1.0</update_rate>
+    </plugin>
+
+    <plugin name="gazebo_ros_properties" filename="libgazebo_ros_properties.so">
+      <ros>
+        <namespace>/ros2_grasp</namespace>
+      </ros>
+    </plugin>
+
+    <plugin name="gazebo_link_attacher" filename="libgazebo_link_attacher.so"/>
+
+  </world>
+</sdf>
