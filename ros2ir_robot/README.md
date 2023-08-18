@@ -131,7 +131,7 @@ The pre-defined programs are saved inside the /programs folder as .txt files. Ev
       * model2 -> Name of the object to be attached (defined in the object .urdf). 
       * link2 -> Name of the object link.
 
-## INSTRUCTIONS: Obtaining ROBOT INFORMATION
+## Obtaining ROBOT INFORMATION
 
 The __RobotState.py__ script allows the user to get the state of the robot in __joint values__, by simply executing the following command:
 ```sh
@@ -139,25 +139,32 @@ ros2 run ros2ir_execution RobotState.py
 # The script returns the robot's JointState values in the standard format presented above, in the sequence definition:
 # {'joint1': 0.0, 'joint2': 0.0, 'joint3': 0.0, 'joint4': 0.0, 'joint5': 0.0, 'joint6': 0.0}
 ```
-The __SpawnObject.py__ script allows the user to spawn any object (defined in a .__urdf__ file) to a Gazebo simulation, by simply executing the following command:
-```sh
-ros2 run ros2ir_execution SpawnObject.py --package "{}" --urdf "{}.urdf" --name "{}" --x {} --y {} --z {}
-# NOTE: It is assumed that the .urdf file of the object to be spawned is stored in the /urdf folder of the selected package.
-```
+
 The __robpose.cpp__ script allows the user to get the pose of the robot's end-effector (tool0 flange) in __(POS + ROT)__, by simply subscribing to the /Robpose ROS2 topic:
 ```sh
 ros2 topic echo /Robpose
 ```
 
-## COMMANDS: (must remove and add into SOLUTION.md)
+## Spawn any object (CAD file) into the Simulation Environment
+
+The __SpawnObject.py__ script allows the user to spawn any object (defined in a .__urdf__ file) to a Gazebo simulation, by simply executing the following command:
+```sh
+ros2 run ros2ir_execution SpawnObject.py --package "{}" --urdf "{}.urdf" --name "{}" --x {} --y {} --z {}
+# NOTE: It is assumed that the .urdf file of the object to be spawned is stored in the /urdf folder of the selected package.
+```
+
+## Execute -> cubePP program
 
 ```sh
+# Spawn 4 different boxes into the cell:
 ros2 run ros2ir_execution SpawnObject.py --package "ros2ir_gazebo" --urdf "box.urdf" --name "box1" --x 0.575 --y 0.525 --z 0.88
 ros2 run ros2ir_execution SpawnObject.py --package "ros2ir_gazebo" --urdf "box.urdf" --name "box2" --x 0.575 --y 0.625 --z 0.88
 ros2 run ros2ir_execution SpawnObject.py --package "ros2ir_gazebo" --urdf "box.urdf" --name "box3" --x 0.575 --y 0.725 --z 0.88
 ros2 run ros2ir_execution SpawnObject.py --package "ros2ir_gazebo" --urdf "box.urdf" --name "box4" --x 0.575 --y 0.825 --z 0.88
 
+# Execute sequence:
 ros2 run ros2ir_execution sequence.py --ros-args -p PROGRAM_FILENAME:="irb120cubePP" -p ROBOT_MODEL:="irb120" -p EE_MODEL:="egp64" -p GzBr_ENV:="gazebo"
 
+# For the REAL ROBOT:
 ros2 run ros2ir_execution sequence.py --ros-args -p PROGRAM_FILENAME:="irb120cubePP_ROB" -p ROBOT_MODEL:="irb120" -p EE_MODEL:="egp64" -p GzBr_ENV:="gazebo"
 ```

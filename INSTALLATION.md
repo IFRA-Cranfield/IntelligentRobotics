@@ -50,6 +50,11 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
 6. Install ROS2 packages, which are required for ROS2-based Robot Simulation and Control:
 
     ```sh
+    # Rosdep, vcstool and colcon:
+    sudo apt install python3-rosdep
+    sudo apt install python3-vcstool
+    sudo apt install python3-colcon-common-extensions
+
     # ROS2 Control + ROS2 Controllers:
     sudo apt install ros-humble-ros2-control
     sudo apt install ros-humble-ros2-controllers
