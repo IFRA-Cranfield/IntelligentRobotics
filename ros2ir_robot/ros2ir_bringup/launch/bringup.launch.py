@@ -148,7 +148,7 @@ def generate_launch_description():
 
     # *** PLANNING CONTEXT *** #
     # Robot description, SRDF:
-    robot_description_semantic_config = load_file("ros2ir_moveit2", "config/irb120egp64.srdf")
+    robot_description_semantic_config = load_file("ros2ir_moveit2", "config/irb120.srdf")
     robot_description_semantic = {"robot_description_semantic": robot_description_semantic_config}
 
     # Kinematics.yaml file:
