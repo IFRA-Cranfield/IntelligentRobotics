@@ -5,7 +5,7 @@ The ros2ir_simplepackage consists of a raw ROS2 Package containing 2 short Pytho
 Both scripts are executed by running the following commands in the terminal shell:
 ```sh
 # Python script:
-ros2 run ros2ir_simplepackahe HelloWorld.py
+ros2 run ros2ir_simplepackage HelloWorld.py
 # C++ script:
 ros2 run ros2ir_simplepackage helloworld
 ```

@@ -9,7 +9,7 @@ ROS2 Package containing:
 ### Execute: Publisher + Subscriber
 1. Open a terminal shell, and execute the ROS2 Subscriber node:
     ```sh
-    ros2 run ros2ir_pubsub Susbcriber.py
+    ros2 run ros2ir_pubsub Subscriber.py
     ```
 2. Open a different terminal shell, and execute the ROS2 Publisher node:
     ```sh
@@ -19,7 +19,7 @@ ROS2 Package containing:
 ### Execute: Publisher + Subscriber (CustomData)
 1. Open a terminal shell, and execute the ROS2 Subscriber node:
     ```sh
-    ros2 run ros2ir_pubsub Susbcriber_CustomData.py
+    ros2 run ros2ir_pubsub Subscriber_CustomData.py
     ```
 2. Open a different terminal shell, and execute the ROS2 Publisher node:
     ```sh
