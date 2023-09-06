@@ -5,7 +5,7 @@ The /ros2ir_robot folder contains 5 different packages:
 - ros2ir_moveit2 -> For the Robot to be moved and controlled, a ROS 2 MoveIt!2 package is required. This package contains all the information related to the ROS 2 - MoveGroup (moveit2) node that controls the robot and its behaviour.
 - ros2ir_bringup -> The Bringup package acts as the main connection point between ROS 2 and the Real Robot. It contains all the information about the robot controllers, and establishes the connection between moveit2 and the Real Robot. For the connection between ROS 2 and a Real Robot to be established, a ROS 2 Driver is required, which translates the ROS 2-based commands to the Robot Controller. This ROS 2 Driver is usually developed by the Robot vendor or a recognised ROS2-development company.
 - ros2ir_execution -> Additional ROS2 Package containing source code for specific tasks such as program execution (and storage), spawning objects to the simulation environment and obtaining the robot's joint-space state.
-- ros2ir_detection -> TBD.
+- ros2ir_detection -> ROS2 package containing combined Object Detection, Computer Vision and Robot Control applications, developed in Python with YOLOv8 and OpenCV Clients.
 
 ## INSTRUCTIONS: Execute ROS2 Environments
 
@@ -167,4 +167,15 @@ ros2 run ros2ir_execution sequence.py --ros-args -p PROGRAM_FILENAME:="irb120cub
 
 # For the REAL ROBOT:
 ros2 run ros2ir_execution sequence.py --ros-args -p PROGRAM_FILENAME:="irb120cubePP_ROB" -p ROBOT_MODEL:="irb120" -p EE_MODEL:="egp64" -p GzBr_ENV:="gazebo"
+```
+
+## Execute -> ros2ir_detection
+
+```sh
+# Execute Python scripts:
+ros2 run ros2ir_detection detect.py
+ros2 run ros2ir_detection coordinates.py
+ros2 run ros2ir_detection coordinates_topic.py
+ros2 run ros2ir_detection cubePP.py
+ros2 run ros2ir_detection cubePP_loop.py
 ```
