@@ -1,3 +1,5 @@
+{'action': 'MoveR', 'value': {'joint': 'joint1', 'value': 1.0}, 'speed': 1.0}
+{'action': 'MoveR', 'value': {'joint': 'joint1', 'value': -1.0}, 'speed': 1.0}
 {'action': 'MoveJ', 'value': {'joint1': -0.0265, 'joint2': 17.8071, 'joint3': 40.2104, 'joint4': -0.1334, 'joint5': 32.3671, 'joint6': 0.0865}, 'speed': 1.0}
 {'action': 'MoveL', 'value': {'x': 0.0, 'y': 0.0, 'z': -0.05}, 'speed': 0.05}
 {'action': 'ABB - GripperClose'}
