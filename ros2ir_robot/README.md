@@ -166,7 +166,7 @@ ros2 run ros2ir_execution SpawnObject.py --package "ros2ir_gazebo" --urdf "box.u
 ros2 run ros2ir_execution sequence.py --ros-args -p PROGRAM_FILENAME:="irb120cubePP" -p ROBOT_MODEL:="irb120" -p EE_MODEL:="egp64" -p GzBr_ENV:="gazebo"
 
 # For the REAL ROBOT:
-ros2 run ros2ir_execution sequence.py --ros-args -p PROGRAM_FILENAME:="irb120cubePP_ROB" -p ROBOT_MODEL:="irb120" -p EE_MODEL:="none" -p GzBr_ENV:="bringup"
+ros2 run ros2ir_execution sequence.py --ros-args -p PROGRAM_FILENAME:="irb120cubePP_ROB" -p ROBOT_MODEL:="irb120" -p EE_MODEL:="egp64" -p GzBr_ENV:="bringup"
 ```
 
 ## Execute -> ros2ir_detection
