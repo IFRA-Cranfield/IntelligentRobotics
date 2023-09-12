@@ -160,8 +160,8 @@ def main(args=None):
             # Image PROCESSING to get COORDINATES:
             ROI = cv2.GaussianBlur(ROI,(3,3),0)
             imgHSV = cv2.cvtColor(ROI, cv2.COLOR_BGR2HSV)
-            lowLimit = (0, 10, 10)
-            upLimit = (70, 255, 255)
+            lowLimit = (10, 100, 20)
+            upLimit = (25, 255, 255)
             mask = cv2.inRange(imgHSV, lowLimit, upLimit)
 
             # Find the contours in the dilated image:
@@ -189,6 +189,8 @@ def main(args=None):
                     box = cv2.boxPoints(rect)
                     box = np.int0(box)
                     cv2.polylines(ROI, [box], True, (255,0,0), 2)
+                
+                cv2.imshow("YOLOv8 Model: CUBE DETECTION - ROI", ROI)
                 
                 # TRANSFORM to: CELL(m)
                 xRES = yo/1000 + 0.35
