@@ -6,7 +6,7 @@ This course provides key insights into Industrial Robotics and Machine Learning.
 
 ### Short Course Information
 
-- __Dates__: 11-12 September 2023.
+- __Dates__: 20-21 May 2024.
 - __Duration__: 2 days.
 - __Location__: Cranfield University (Cranfield Campus, MK43 0AL)
 - __Course Description__: This two-day course is presented through a mixture of lectures, workshops and discussion of case studies. Active participation from the delegates is strongly encouraged particularly during the whole course to consolidate learning. All delegates will receive a Certificate of Attendance upon completion of this course. This course provides essential knowledge on advanced industrial robotics, mechanics and kinematics, control, and the application of inbuilt intelligence to allow robots to learn from their environment or existing data. It will also provide an overview of robotics ethics and standards giving the delegate an insight into the social impact of advanced robotics. It is equally suitable for engineers new to robotics or for more experienced engineers aiming to expand their knowledge of more complex concepts such as kinematics and machine learning.
