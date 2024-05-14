@@ -74,6 +74,21 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
     # (+) Add into .bashrc file -> export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
     ```   
 
+    (EXTRA STEP) -> Due to problems with URDF file processing for the newest version of ROS 2 Control-Gazebo plugin, Gazebo-ROS2-Control must be downgraded to the 0.4.6 version:
+
+    ```sh
+    # Uninstall Gazebo ROS2 Control:
+    sudo apt remove ros-humble-gazebo-ros2-control
+
+    # Download and install the 0.4.6 version:
+    cd ~/dev_ws/src
+    git clone https://github.com/ros-controls/gazebo_ros2_control.git
+    cd gazebo_ros2_control
+    git reset --hard 9a3736c # Commit for the 0.4.6 version!
+    cd ~/dev_ws
+    colcon build
+    ``` 
+
 7. __ABB DRIVER for ROS2__: The installation of the [abb_ros2](https://github.com/PickNikRobotics/abb_ros2) driver is required for the control of any real ABB robot using ROS 2.
 
     ```sh
@@ -88,7 +103,7 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
     colcon build
     ```
 
-8. (OPTIONAL) -> __Universal Robots ROS2 Driver__: The installation of the [ur-robot-driver](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver) is required for the control of any real UR robot using ROS 2. Binary install, for ROS2 Humble:
+8. __Universal Robots ROS2 Driver__: The installation of the [ur-robot-driver](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver) is required for the control of any real UR robot using ROS 2. Binary install, for ROS2 Humble:
 
     ```sh
     sudo apt-get install ros-humble-ur
@@ -132,4 +147,24 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
     git clone https://github.com/IFRA-Cranfield/IntelligentRobotics
     cd ~/dev_ws
     colcon build
+    ```
+
+12. Import and install IFRA-Cranfield/ur3_CranfieldRobotics and IFRA-Cranfield/ros2_RobotiqGripper repositories for the simulation and control of the UR3 Robot (+ Robotiq grippers) in the Intelligent Automation Lab at Cranfield University:
+
+    ```sh
+    cd ~/dev_ws/src
+    git clone https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics
+    git clone https://github.com/IFRA-Cranfield/ros2_RobotiqGripper
+    cd ~/dev_ws
+    colcon build
+    ```
+
+13. REQUIRED to run OBJECT DETECTION and COMPUTER VISION modules -> Install __YOLOv8__ and __OpenCV__:
+
+    ```sh
+    # Install YOLOv8:
+    pip install ultralytics
+
+    # Install OpenCV:
+    pip install opencv-contrib-python
     ```
