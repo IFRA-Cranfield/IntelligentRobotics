@@ -109,7 +109,16 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
     sudo apt-get install ros-humble-ur
     ```
 
-9. Import and install the following ROS2 Packages developed by IFRA-Cranfield:
+9. Import and install the ROS 2 Driver developed by __IFRA-Cranfield__ to control the Robotiq gripper through ROS 2:
+
+    ```sh
+    cd ~/dev_ws/src
+    git clone https://github.com/IFRA-Cranfield/ros2_RobotiqGripper.git
+    cd ~/dev_ws
+    colcon build
+    ```
+
+10. Import and install the following ROS2 Packages developed by IFRA-Cranfield:
 
     ```sh
     # IFRA-Cranfield/IFRA_LinkAttacher:
@@ -131,7 +140,7 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
     colcon build
     ```
 
-10. Import and install __ros2_SimRealRobotControl__ repository:
+11. Import and install __ros2_SimRealRobotControl__ repository:
 
     ```sh
     cd ~/dev_ws/src
@@ -140,7 +149,16 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
     colcon build
     ```   
 
-11. Import and install IFRA-Cranfield/IntelligentRobotics:
+12. Import and install IFRA-Cranfield/ur3_CranfieldRobotics for the simulation and control of the UR3 Robot (+ Robotiq grippers) in the Intelligent Automation Lab at Cranfield University:
+
+    ```sh
+    cd ~/dev_ws/src
+    git clone https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics
+    cd ~/dev_ws
+    colcon build
+    ```
+
+13. Import and install IFRA-Cranfield/IntelligentRobotics:
 
     ```sh
     cd ~/dev_ws/src
@@ -149,17 +167,7 @@ __PC Set-Up for Robot Simulation and Control in ROS2__
     colcon build
     ```
 
-12. Import and install IFRA-Cranfield/ur3_CranfieldRobotics and IFRA-Cranfield/ros2_RobotiqGripper repositories for the simulation and control of the UR3 Robot (+ Robotiq grippers) in the Intelligent Automation Lab at Cranfield University:
-
-    ```sh
-    cd ~/dev_ws/src
-    git clone https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics
-    git clone https://github.com/IFRA-Cranfield/ros2_RobotiqGripper
-    cd ~/dev_ws
-    colcon build
-    ```
-
-13. REQUIRED to run OBJECT DETECTION and COMPUTER VISION modules -> Install __YOLOv8__ and __OpenCV__:
+14. REQUIRED to run OBJECT DETECTION and COMPUTER VISION modules -> Install __YOLOv8__ and __OpenCV__:
 
     ```sh
     # Install YOLOv8:
