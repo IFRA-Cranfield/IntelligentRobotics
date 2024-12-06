@@ -6,7 +6,7 @@ This course provides key insights into Industrial Robotics and Machine Learning.
 
 ### Short Course Information
 
-- __Dates__: 20-21 May 2024.
+- __Dates__: TBD.
 - __Duration__: 2 days.
 - __Location__: Cranfield University (Cranfield Campus, MK43 0AL)
 - __Course Description__: This two-day course is presented through a mixture of lectures, workshops and discussion of case studies. Active participation from the delegates is strongly encouraged particularly during the whole course to consolidate learning. All delegates will receive a Certificate of Attendance upon completion of this course. This course provides essential knowledge on advanced industrial robotics, mechanics and kinematics, control, and the application of inbuilt intelligence to allow robots to learn from their environment or existing data. It will also provide an overview of robotics ethics and standards giving the delegate an insight into the social impact of advanced robotics. It is equally suitable for engineers new to robotics or for more experienced engineers aiming to expand their knowledge of more complex concepts such as kinematics and machine learning.
@@ -25,7 +25,15 @@ __Robot Control through ROS2__: The theoretical concepts to be explained and dis
 
 This repo contains all the information, documentation and source code required to undertake all the ROS2-based practical tasks of the Intelligent Robotics short course.
 
-- Installation: All packages in this repository have been developed, executed and tested in a Ubuntu 22.04 machine with ROS 2 Humble. Please click [HERE](https://github.com/IFRA-Cranfield/IntelligentRobotics/blob/main/INSTALLATION.md) and follow all the required steps to set-up a ROS 2 Humble environment in Ubuntu and install the ROS 2-based Robot Simulation and Control packages for IFRA-Cranfield/IntelligentRobotics.
+- Installation: All packages in this repository have been developed, executed and tested in a Ubuntu 22.04 machine with ROS 2 Humble. Please click [HERE](https://github.com/IFRA-Cranfield/ros2_SimRealRobotControl/blob/humble/instructions/Installation.md) and follow all the required steps to set-up a ROS 2 Humble environment in Ubuntu and install the ROS 2-based Robot Simulation and Control packages for IFRA-Cranfield/IntelligentRobotics. After that, please clone and build this repository:
+
+  ```sh
+  cd ~/dev_ws/src
+  git clone https://github.com/IFRA-Cranfield/IntelligentRobotics
+  cd ..
+  colcon build
+  ```
+
 - Tasks: This [DOCUMENT](https://github.com/IFRA-Cranfield/IntelligentRobotics/blob/main/TASKS.md) contains all the instructions about how to undertake the ROS2-based practical tasks step-by-step.
 
 ### Intelligent Flexible Robotics and Assembly Group (IFRA-Cranfield)

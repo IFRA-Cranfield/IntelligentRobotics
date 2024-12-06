@@ -32,20 +32,11 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-# =========================================================== #
-# REQUIRED TO execute python scripts:
-
 install(
   DIRECTORY 
-    python
     programs
   DESTINATION 
     share/${PROJECT_NAME}
 )
-install(PROGRAMS
-  python/RobotState.py
-  python/SpawnObject.py
-  python/sequence.py
-  DESTINATION lib/${PROJECT_NAME} 
-)
+
 ament_package()

@@ -47,88 +47,48 @@ _Robot Simulation and Control through ROS2_
 
 ### Task N4: Robot Simulation in ROS2-Gazebo
 
+ROS 2 Packages: [IFRA-Cranfield/IntelligentRobotics/ros2ir_robot](https://github.com/IFRA-Cranfield/IntelligentRobotics/tree/main/ros2ir_robot)
+
 __ABB IRB-120 Robot__
 
 - Objective: Launch and explore a ROS2-based Robot Control and Simulation environment (Gazebo + MoveIt!2) for the ABB IRB-120. 
-- ROS 2 Packages: [IFRA-Cranfield/IntelligentRobotics/ros2ir_robot](https://github.com/IFRA-Cranfield/IntelligentRobotics/tree/main/ros2ir_robot)
 - Activity: 
     - Launch irb120_moveit2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
     - Move/jog the robot in MoveIt!2, realising collisions, joint limits, configurations… 
     - Explain IFRA_LinkAttacher, IFRA_ObjectPose and IFRA_LinkPose plugins. 
     - Execute custom ROS2 Actions: /Move and /Robmove. 
     - Execute static program for Cube Pick and Place.
+    - Execute static program for Cylinder Stacking use-case.
 
 __UR3 Robot__ 
 
 - Objective: Launch and explore a ROS2-based Robot Control and Simulation environment (Gazebo + MoveIt!2) for the UR3. 
-- ROS 2 Packages: [IFRA-Cranfield/ur3_CranfieldRobotics](https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics/tree/main), with detailed instructions [here](https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics/tree/main/ur3cranfield_execution).
 - Activity: 
-    - Launch ur3_moveit2 environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
+    - Launch ur3_moveit2 environment (Cranfield IA Lab cell, w/ Robotiq HandE gripper). 
     - Move/jog the robot in MoveIt!2, realising collisions, joint limits, configurations… 
     - Explain IFRA_LinkAttacher, IFRA_ObjectPose and IFRA_LinkPose plugins. 
     - Execute custom ROS2 Actions: /Move and /Robmove. 
     - Execute static program for Cube Pick and Place.
+    - Execute static program for Cube Kitting use-case.
 
 ### Task N5: Control of Real Robot using ROS2
 
 __ABB IRB-120 Robot__
 
-- Objective: Launch and explore a ROS2-based Robot Control environment (w/ MoveIt!2) for the ABB IRB-120 in the Cranfield Uni IA Lab. 
-- ROS 2 Packages: [IFRA-Cranfield/IntelligentRobotics/ros2ir_robot](https://github.com/IFRA-Cranfield/IntelligentRobotics/tree/main/ros2ir_robot)
+- Objective: Launch and explore a ROS2-based Robot Control environment (w/ MoveIt!2) for the real ABB IRB-120 robot. 
 - Activity: 
     - Launch irb120_bringup environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
     - Move/jog the robot in MoveIt!2, realising collisions, joint limits, configurations… 
     - Execute custom ROS2 Actions: /Move and /Robmove. 
     - Execute static program for Cube Pick and Place. 
+    - Execute static program for Cylinder Stacking use-case.
 
 __UR3 Robot__
 
-- Objective: Launch and explore a ROS2-based Robot Control environment (w/ MoveIt!2) for the ABB IRB-120 in the Cranfield Uni IA Lab. 
-- ROS 2 Packages: [IFRA-Cranfield/ur3_CranfieldRobotics](https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics/tree/main), with detailed instructions [here](https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics/tree/main/ur3cranfield_execution).
+- Objective: Launch and explore a ROS2-based Robot Control environment (w/ MoveIt!2) for the real UR3 Robot. 
 - Activity: 
-    - Launch ur3_bringup environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
+    - Launch ur3_bringup environment (Cranfield IA Lab cupboard, w/ Robotiq HandE gripper). 
     - Move/jog the robot in MoveIt!2, realising collisions, joint limits, configurations… 
     - Execute custom ROS2 Actions: /Move and /Robmove. 
     - Execute static program for Cube Pick and Place. 
-
-## PART (3)
-_Integration of Machine Learning within ROS2: Intelligent Robotics_
-
-### Task N6: Combination of ML (YOLO-Perception) with Robot Control in ROS2 (ABB IRB-120 Robot)
-
-This task can only be done in the Real ABB IRB-120 Cell at the IA Lab.
-
-- Objective: Understand how complex applications can be executed through ROS2 and how information can be exchanged between ML-nodes and the Robot through ROS2 in order to execute complex tasks. 
-- ROS 2 Packages: [IFRA-Cranfield/IntelligentRobotics/ros2ir_robot](https://github.com/IFRA-Cranfield/IntelligentRobotics/tree/main/ros2ir_robot)
-- Activity: 
-    - Task 1: (detect.py)  
-    Execute a simple YOLO detection script that detects a cube within the workspace. 
-    - Task 2: (coordinates.py)  
-    This script detects the cube within the workspace and returns its POSE coordinates. 
-    - Task 3: (coordinates_topic.py)  
-    The coordinates are shared within the ROS2 network à Published to a ROS2 Topic. 
-    - Task 4: (cubePP.py)  
-    This script subscribes to the ROS2 Topic where the cube coordinates are published, and it shares that information with the robot in order to pick the cube. 
-    - Task 5: (cubePP_loop.py)  
-        1. Get the cube coordinates. 
-        2. Share coordinates with Robot. 
-        3. Pick cube. 
-        4. Place cube randomly within the cell. 
-        5. Move robot back to HomePos. 
-        6. Start again. 
-
-### Task N7: Combination of ML (YOLO-Perception) with Robot Control in ROS2 (UR3 Robot)
-
-This task can be executed in both Gazebo Simulation and the Real UR3 Robot in the Cranfield Robotics Stand (IA Lab).
-
-- Objective: Understand how complex applications can be executed through ROS2 and how information can be exchanged between ML-nodes and the Robot through ROS2 in order to execute complex tasks. 
-- ROS 2 Packages: [IFRA-Cranfield/ur3_CranfieldRobotics](https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics/tree/main), with detailed instructions [here](https://github.com/IFRA-Cranfield/ur3_CranfieldRobotics/tree/main/ur3cranfield_execution).
-- Activity: 
-    - Task 1: (visualize.py)  
-    Execute a simple YOLO detection script that detects a cube within the workspace. 
-    - Task 2: (coordinates.py)  
-    This script detects the cube within the workspace and returns its POSE coordinates. 
-    - Task 3: (coordinates2Topic.py)  
-    The coordinates are shared within the ROS2 network and Published to a ROS2 Topic. 
-    - Task 4: (cubePP.py)  
-    This script subscribes to the ROS2 Topic where the cube coordinates are published, and it shares that information with the robot in order to pick the cube and place it in its corresponding tray slot.
+    - Execute static program for Cube Kitting use-case.

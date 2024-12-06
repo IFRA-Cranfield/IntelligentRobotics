@@ -38,7 +38,6 @@ endif()
 install(
   DIRECTORY 
     config
-    launch
     urdf 
     meshes
     worlds
