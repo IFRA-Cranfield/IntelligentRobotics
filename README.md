@@ -27,7 +27,7 @@ This repo contains all the information, documentation and source code required t
 
 - Installation: All packages in this repository have been developed, executed and tested in a Ubuntu 22.04 machine with ROS 2 Humble. Please click [HERE](https://github.com/IFRA-Cranfield/IntelligentRobotics/blob/humble/INSTALLATION.md) and follow all the required steps to set-up a ROS 2 Humble environment in Ubuntu and install the ROS 2-based Robot Simulation and Control packages for IFRA-Cranfield/IntelligentRobotics.
 
-- Tasks: This [DOCUMENT](https://github.com/IFRA-Cranfield/IntelligentRobotics/blob/main/TASKS.md) contains all the instructions about how to undertake the ROS 2-based practical tasks step-by-step.
+- Tasks: This [DOCUMENT](https://github.com/IFRA-Cranfield/IntelligentRobotics/blob/humble/TASKS.md) contains all the instructions about how to undertake the ROS 2-based practical tasks step-by-step.
 
 ### Intelligent Flexible Robotics and Assembly Group (IFRA-Cranfield)
 
