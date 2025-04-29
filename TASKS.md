@@ -93,36 +93,36 @@ __UR3 Robot__
 
 ___Gazebo Simulation Environment___
 
+Objective: Combine our Robot Simulation ROS 2 Packages with YOLO+OpenCV (in Python) and _ROS 2 Communication Mechanisms_ to perform an automated object detection, pose estimation and handling task.
+
 __ABB IRB-120 Robot__
 
-- Objective: Combine our Robot Simulation ROS 2 Packages with YOLO+OpenCV (in Python) and _ROS 2 Communication Mechanisms_ to perform an automated object detection, pose estimation and handling task.
-- Activity: 
-    - Launch irb120_moveit2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
-    - Run the Cube Detection + Pose Estimation ROS 2 Node.
-    - Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
+Activity: 
+- Launch irb120_moveit2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
+- Run the Cube Detection + Pose Estimation ROS 2 Node.
+- Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
 
 __UR3 Robot__
 
-- Objective: Combine our Robot Simulation ROS 2 Packages with YOLO+OpenCV (in Python) and _ROS 2 Communication Mechanisms_ to perform an automated object detection, pose estimation and handling task.
-- Activity: 
-    - Launch ur3_moveit2 environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
-    - Run the Cube Detection + Pose Estimation ROS 2 Node.
-    - Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
+Activity: 
+- Launch ur3_moveit2 environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
+- Run the Cube Detection + Pose Estimation ROS 2 Node.
+- Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
 
 ___Real Robot___
 
+Objective: Combine our Real Robot Control ROS 2 Packages with YOLO+OpenCV (in Python) and _ROS 2 Communication Mechanisms_ to perform an automated object detection, pose estimation and handling task.
+
 __ABB IRB-120 Robot__
 
-- Objective: Combine our Robot Simulation ROS 2 Packages with YOLO+OpenCV (in Python) and _ROS 2 Communication Mechanisms_ to perform an automated object detection, pose estimation and handling task.
-- Activity: 
-    - Launch irb120_bringup environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
-    - Run the Cube Detection + Pose Estimation ROS 2 Node.
-    - Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
+Activity: 
+- Launch irb120_bringup environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
+- Run the Cube Detection + Pose Estimation ROS 2 Node.
+- Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
 
 __UR3 Robot__
 
-- Objective: Combine our Robot Simulation ROS 2 Packages with YOLO+OpenCV (in Python) and _ROS 2 Communication Mechanisms_ to perform an automated object detection, pose estimation and handling task.
-- Activity: 
-    - Launch ur3_bringup environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
-    - Run the Cube Detection + Pose Estimation ROS 2 Node.
-    - Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
+Activity: 
+- Launch ur3_bringup environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
+- Run the Cube Detection + Pose Estimation ROS 2 Node.
+- Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
