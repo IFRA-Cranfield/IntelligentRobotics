@@ -50,6 +50,8 @@ class ActionClient_(Node):
         self._action_client.wait_for_server()
         print ("/Service_Sum ROS 2 SERVICE detected!")  
 
+        self.goal_handle = None
+
     # SEND GOAL:
     def send_goal(self, number, limit):
 
@@ -67,9 +69,9 @@ class ActionClient_(Node):
     # CHECK IF GOAL HAS BEEN ACCEPTED/REJECTED:
     def goal_response_callback(self, future):
         
-        goal_handle = future.result()
+        self.goal_handle = future.result()
         
-        if not goal_handle.accepted:
+        if not self.goal_handle.accepted:
             print("ERROR: GOAL has been rejected.")
             rclpy.shutdown()
             return
@@ -77,7 +79,7 @@ class ActionClient_(Node):
         print("/Action_SERIES -> GOAL has been accepted.")
         print("")
 
-        self._get_result_future = goal_handle.get_result_async()
+        self._get_result_future = self.goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback)                                              
 
     # FEEDBACK:
@@ -104,6 +106,10 @@ class ActionClient_(Node):
         # SHUTDOWN after receiving the result:
         rclpy.shutdown()
 
+    # CANCEL ACTION CALL:
+    def CANCEL(self):
+        self.goal_handle.cancel_goal_async()
+
 # ================================================================================= #
 # ===================================== MAIN ====================================== #
 # ================================================================================= #
@@ -129,9 +135,15 @@ def main(args=None):
     print("")
 
     # ACTION CALL (send_goal):
-    ActionClientNode.send_goal(number,limit)
 
-    rclpy.spin(ActionClientNode)
+    try:
+        ActionClientNode.send_goal(number,limit)
+        rclpy.spin(ActionClientNode)
+
+    except KeyboardInterrupt:
+        print("")
+        print("CTRL+C detected. Cancelling ACTION CALL...")
+        ActionClientNode.CANCEL()
 
     print ("")
     print ("Closing program... Bye!")
