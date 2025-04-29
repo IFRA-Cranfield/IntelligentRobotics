@@ -24,7 +24,7 @@
 # ================================================================================= #
 # Import libraries:
 
-# Library required to execute ROS2 w/ Python:
+# Library required to execute ROS 2 w/ Python:
 import rclpy
 from rclpy.node import Node
 
@@ -43,16 +43,16 @@ class ServiceClient(Node):
 
         # Check if the ServiceServer is running:
         while not self.cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("/Service_Sum ROS2 Service not available, waiting...")
+            self.get_logger().info("/Service_Sum ROS 2 Service not available, waiting...")
         print("")
-        print ("/Service_Sum ROS2.0 SERVICE detected!")  
+        print ("/Service_Sum ROS 2 SERVICE detected!")  
 
         # Declare REQUEST variable (of CUSTOM DATA type):
         self.req = Sum.Request()                                                   
 
     def service_REQUEST(self):
         
-        # Get a and b values from user input, and call ROS2 Service:
+        # Get a and b values from user input, and call ROS 2 Service:
         print (" +++ /Service_Sum +++ ")
         print ("Please input the values of a and b:")
         self.req.a = float(input("a -> "))
@@ -75,10 +75,10 @@ def main(args=None):
 
     # Declare ServiceClient NODE:
     ServiceClientNode = ServiceClient()
-    print ("ros2ir_ServiceClient ROS2 Node generated.")
+    print ("ros2ir_ServiceClient ROS 2 Node generated.")
     print ("")
 
-    # EXECUTE ROS2 Service CALL:
+    # EXECUTE ROS 2 Service CALL:
     ServiceClientNode.service_REQUEST()
 
     # Obtain RESULT:
@@ -92,7 +92,7 @@ def main(args=None):
                 RESULT = ServiceClientNode.future.result()
 
             except Exception as exc:
-                print("/Service_Sum ROS2 Service call failed. ERROR: " + str(exc))
+                print("/Service_Sum ROS 2 Service call failed. ERROR: " + str(exc))
 
             else:
                 print("RESULT: " + str(ServiceClientNode.req.a) + " + " + str(ServiceClientNode.req.b) + " = " + str(RESULT.result))

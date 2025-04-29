@@ -24,7 +24,7 @@
 # ================================================================================= #
 # Import libraries:
 
-# Library required to execute ROS2 w/ Python:
+# Library required to execute ROS 2 w/ Python:
 import rclpy
 from rclpy.node import Node
 
@@ -69,7 +69,7 @@ def main(args=None):
 
     # Declare ServiceServer NODE:
     ServiceServerNode = ServiceServer()
-    print ("ros2ir_ServiceServer ROS2 Node generated.")
+    print ("ros2ir_ServiceServer ROS 2 Node generated.")
     print ("")
 
     # Spin SERVICE -> The Service Server will execute the service_Callback every single time the service is called.

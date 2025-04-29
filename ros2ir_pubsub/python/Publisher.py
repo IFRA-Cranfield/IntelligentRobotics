@@ -24,12 +24,12 @@
 # ================================================================================= #
 # Import libraries:
 
-# Library required to execute ROS2 w/ Python:
+# Library required to execute ROS 2 w/ Python:
 import rclpy
 from rclpy.node import Node
 
 # Import data class:
-from std_msgs.msg import String  # STRING msg type, included in the generic ROS2 data classes.
+from std_msgs.msg import String  # STRING msg type, included in the generic ROS 2 data classes.
 
 # ================================================================================= #
 # PUBLISHER class:
@@ -58,7 +58,7 @@ def main(args=None):
 
     # Declare PUBLISHER NODE:
     PublisherNode = Publisher()
-    print ("ros2ir_PUBLISHER ROS2 Node generated.")
+    print ("ros2ir_PUBLISHER ROS 2 Node generated.")
 
     # Publish message -> ONCE:
 
@@ -66,7 +66,7 @@ def main(args=None):
     MSG = String()
 
     # 2. Fill in:
-    MSG.data = "HELLO from ROS2!"
+    MSG.data = "HELLO from ROS 2!"
 
     # 3. Publish:
     PublisherNode.publisher.publish(MSG)

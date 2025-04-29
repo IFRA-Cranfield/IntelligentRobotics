@@ -24,7 +24,7 @@
 # ================================================================================= #
 # Import libraries:
 
-# Library required to execute ROS2 w/ Python:
+# Library required to execute ROS 2 w/ Python:
 import rclpy
 from rclpy.node import Node
 
@@ -58,7 +58,7 @@ def main(args=None):
 
     # Declare PUBLISHER NODE:
     PublisherNode = Publisher()
-    print ("ros2ir_PUBLISHER ROS2 Node generated.")
+    print ("ros2ir_PUBLISHER ROS 2 Node generated.")
 
     # Publish message -> ONCE:
 

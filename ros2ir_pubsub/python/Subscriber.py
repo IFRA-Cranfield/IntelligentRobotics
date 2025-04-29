@@ -24,12 +24,12 @@
 # ================================================================================= #
 # Import libraries:
 
-# Library required to execute ROS2 w/ Python:
+# Library required to execute ROS 2 w/ Python:
 import rclpy
 from rclpy.node import Node
 
 # Import data class:
-from std_msgs.msg import String  # STRING msg type, included in the generic ROS2 data classes.
+from std_msgs.msg import String  # STRING msg type, included in the generic ROS 2 data classes.
 
 # ================================================================================= #
 # SUBSCRIBER class:
@@ -66,7 +66,7 @@ def main(args=None):
 
     # Declare SUBSCRIBER NODE:
     SubscriberNode = Subscriber()
-    print ("ros2ir_SUBSCRIBER ROS2 Node generated.")
+    print ("ros2ir_SUBSCRIBER ROS 2 Node generated.")
 
     # Spin SUBSCRIBER, create CALLBACK:
     print ("Subscribing to /ros2_TOPIC, waiting for a message to be published...")

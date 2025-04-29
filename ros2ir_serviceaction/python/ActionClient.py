@@ -24,7 +24,7 @@
 # ================================================================================= #
 # Import libraries:
 
-# Library required to execute ROS2 w/ Python:
+# Library required to execute ROS 2 w/ Python:
 import rclpy
 from rclpy.node import Node
 
@@ -48,7 +48,7 @@ class ActionClient_(Node):
 
         print ("Waiting for ActionServer to be active...")
         self._action_client.wait_for_server()
-        print ("/Service_Sum ROS2.0 SERVICE detected!")  
+        print ("/Service_Sum ROS 2 SERVICE detected!")  
 
     # SEND GOAL:
     def send_goal(self, number, limit):
@@ -118,7 +118,7 @@ def main(args=None):
 
     # Declare ActionClient NODE:
     ActionClientNode = ActionClient_()
-    print ("ros2ir_ActionClient ROS2 Node generated.")
+    print ("ros2ir_ActionClient ROS 2 Node generated.")
     print ("")
 
     # Get INPUT VALUES (number/limit) for ACTION CALL:

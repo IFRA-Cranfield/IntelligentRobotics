@@ -25,7 +25,7 @@ endif()
 
 # ================================================== #
 
-# Add ROS2 .msg, .srv and .action files:
+# Add ROS 2 .msg, .srv and .action files:
 
 install(
   DIRECTORY 

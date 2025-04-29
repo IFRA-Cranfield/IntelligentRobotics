@@ -24,11 +24,11 @@
 # ================================================================================= #
 # Import libraries:
 
-# Library required to execute ROS2 w/ Python:
+# Library required to execute ROS 2 w/ Python:
 import rclpy
 from rclpy.node import Node
 
-# Required for ROS2 ACTIONS:
+# Required for ROS 2 ACTIONS:
 from rclpy.action import ActionServer, CancelResponse, GoalResponse
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
@@ -89,7 +89,7 @@ class ActionServer_(Node):
 
     # CANCEL ACTION CALL if a "CANCEL" (e.g.: CTRL+C) is requested:
     def cancel_callback(self, goal_handle):
-        print ("CANCEL REQUEST: Cancelling /Action_SERIES ROS2 Action request.")
+        print ("CANCEL REQUEST: Cancelling /Action_SERIES ROS 2 Action request.")
         print ("")
         return CancelResponse.ACCEPT 
 
@@ -156,7 +156,7 @@ def main(args=None):
 
     # Declare ActionServer NODE:
     ActionServerNode = ActionServer_()
-    print ("ros2ir_ActionServer ROS2 Node generated.")
+    print ("ros2ir_ActionServer ROS 2 Node generated.")
     print ("")
 
     # Use a MultiThreadedExecutor to enable processing goals concurrently:

@@ -26,7 +26,7 @@
 // ================================================================================= //
 // Import libraries:
 
-// Library required to execute ROS2 w/ C++:
+// Library required to execute ROS 2 w/ C++:
 #include "rclcpp/rclcpp.hpp"
 
 // Generic library:
