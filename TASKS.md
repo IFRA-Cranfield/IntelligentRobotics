@@ -53,7 +53,7 @@ __ABB IRB-120 Robot__
 
 - Objective: Launch and explore a ROS 2-based Robot Control and Simulation environment (Gazebo + MoveIt!2) for the ABB IRB-120. 
 - Activity: 
-    - Launch irb120_moveit2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
+    - Launch IRB120 MoveIt!2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
     - Move/jog the robot in MoveIt!2, realising collisions, joint limits, configurations… 
     - Explain IFRA_LinkAttacher, IFRA_ObjectPose and IFRA_LinkPose plugins. 
     - Execute custom ROS 2 Actions: /Move and /Robmove. 
@@ -63,7 +63,7 @@ __UR3 Robot__
 
 - Objective: Launch and explore a ROS 2-based Robot Control and Simulation environment (Gazebo + MoveIt!2) for the UR3. 
 - Activity: 
-    - Launch ur3_moveit2 environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
+    - Launch UR3 MoveIt!2 environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
     - Move/jog the robot in MoveIt!2, realising collisions, joint limits, configurations… 
     - Explain IFRA_LinkAttacher, IFRA_ObjectPose and IFRA_LinkPose plugins. 
     - Execute custom ROS 2 Actions: /Move and /Robmove. 
@@ -98,14 +98,14 @@ Objective: Combine our Robot Simulation ROS 2 Packages with YOLO+OpenCV (in Pyth
 __ABB IRB-120 Robot__
 
 Activity: 
-- Launch irb120_moveit2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
+- Launch IRB120 MoveIt!2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
 - Run the Cube Detection + Pose Estimation ROS 2 Node.
 - Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
 
 __UR3 Robot__
 
 Activity: 
-- Launch ur3_moveit2 environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
+- Launch UR3 MoveIt!2 environment (Cranfield IA Lab stand, w/ Robotiq HandE gripper). 
 - Run the Cube Detection + Pose Estimation ROS 2 Node.
 - Run the CubePP script that coordinates the perception with the Robot Operation to undertake the automated handling task.
 
