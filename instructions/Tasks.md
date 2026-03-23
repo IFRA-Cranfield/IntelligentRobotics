@@ -48,7 +48,7 @@ _Robot Simulation and Control through ROS 2_
 ROS 2 Env Launch: [ros2srrc - ROS 2 Environment Launch]()
 ROS 2 Packages - Robots: [IFRA-Cranfield/IntelligentRobotics/ros2ir_robot](https://github.com/IFRA-Cranfield/IntelligentRobotics/tree/humble/ros2ir_robot)
 
-### Task N5: Robot Simulation in ROS 2-Gazebo
+### Task N4: Robot Simulation in ROS 2-Gazebo
 
 __ABB IRB-120 Robot__
 
