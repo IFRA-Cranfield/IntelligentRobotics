@@ -45,9 +45,22 @@ _Understanding ROS 2: Environment, Packages, Data Exchange and Task Execution_
 ## PART (2)
 _Robot Simulation and Control through ROS 2_
 
-### Task N4: Robot Simulation in ROS 2-Gazebo
+ROS 2 Env Launch: [ros2srrc - ROS 2 Environment Launch]()
+ROS 2 Packages - Robots: [IFRA-Cranfield/IntelligentRobotics/ros2ir_robot](https://github.com/IFRA-Cranfield/IntelligentRobotics/tree/humble/ros2ir_robot)
 
-ROS 2 Packages: [IFRA-Cranfield/IntelligentRobotics/ros2ir_robot](https://github.com/IFRA-Cranfield/IntelligentRobotics/tree/humble/ros2ir_robot)
+### Task N5: Robot Simulation in ROS 2-Gazebo
+
+__ABB IRB-120 Robot__
+
+- Objective: Launch and explore a ROS 2-based Robot Control and Simulation environment (Gazebo + MoveIt!2) for the ABB IRB-120. 
+- Activity: 
+    - Launch IRB120 MoveIt!2 environment (Cranfield IA Lab enclosure, w/ EGP-64 gripper). 
+    - Move/jog the robot in MoveIt!2, realising collisions, joint limits, configurations… 
+    - Explain IFRA_LinkAttacher, IFRA_ObjectPose and IFRA_LinkPose plugins. 
+    - Execute custom ROS 2 Actions: /Move and /Robmove. 
+    - Execute static program for Cube Pick and Place task.
+
+### Task N5: Robot Simulation in ROS 2-Gazebo
 
 __ABB IRB-120 Robot__
 
@@ -69,7 +82,7 @@ __UR3 Robot__
     - Execute custom ROS 2 Actions: /Move and /Robmove. 
     - Execute static program for Cube Pick and Place task.
 
-### Task N5: Control of Real Robot using ROS 2
+### Task N6: Control of Real Robot using ROS 2
 
 __ABB IRB-120 Robot__
 
@@ -89,7 +102,10 @@ __UR3 Robot__
     - Execute custom ROS 2 Actions: /Move and /Robmove. 
     - Execute static program for Cube Pick and Place. 
 
-### Task N6: Cube Pose Estimation and Pick&Place Task
+## PART (3)
+_Integration of ML & AI within ROS 2: Object Detection, Pose Estimation and Pick & Place task_
+
+### Task N7: Cube Pose Estimation and Pick&Place Task
 
 ___Gazebo Simulation Environment___
 

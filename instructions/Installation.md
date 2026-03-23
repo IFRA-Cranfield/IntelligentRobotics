@@ -12,6 +12,15 @@ The ROS 2 packages developed in IFRA-Cranfield/IntelligentRobotics are based on 
 
 Installation steps can be found at: https://github.com/IFRA-Cranfield/ros2_SimRealRobotControl/blob/humble/instructions/Installation.md
 
+__Install IntelligentRobotics repository__
+
+```sh
+cd ~/dev_ws/src
+git clone https://github.com/IFRA-Cranfield/IntelligentRobotics
+cd ~/dev_ws
+colcon build
+```  
+
 __Install additional (required) ROS 2 Packages__
 
 The ABB IRB-120 and UR3 Robots will be used in the Intelligent Robotics Short Course. For that reason, the following resources must be downloaded and installed:
@@ -34,7 +43,7 @@ The ABB IRB-120 and UR3 Robots will be used in the Intelligent Robotics Short Co
     colcon build
     ```    
 
-- YOLO and OpenCV:
+- YOLO and OpenCV will be used to undertake the object detection, pose estimation and pick & place task:
 
     ```sh
     # Install OpenCV:
