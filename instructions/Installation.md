@@ -8,9 +8,9 @@ The steps below must be followed in order to properly set-up a ROS 2 machine whi
 
 __PC Set-Up for Robot Simulation and Control in ROS 2 Humble__
 
-The ROS 2 packages developed in IFRA-Cranfield/IntelligentRobotics are based on IFRA-Cranfield's [ros2_SimRealRobotControl](https://github.com/IFRA-Cranfield/ros2_SimRealRobotControl) GitHub Repository. Therefore, ros2_SimRealRobotControl must be installed in order to set-up our IR packages in any Ubuntu 22.04 + ROS 2 Humble machine.
+The ROS 2 packages developed in IFRA-Cranfield/IntelligentRobotics are based on IFRA-Cranfield's [ros2srrc](https://github.com/IFRA-Cranfield/ros2srrc) GitHub Repository. Therefore, ros2srrc must be installed in order to set-up our IR packages in any Ubuntu 22.04 + ROS 2 Humble machine.
 
-Installation steps can be found at: https://github.com/IFRA-Cranfield/ros2_SimRealRobotControl/blob/humble/instructions/Installation.md
+Installation steps can be found at: https://github.com/IFRA-Cranfield/ros2srrc/blob/humble/instructions/Installation.md
 
 __Install IntelligentRobotics repository__
 
